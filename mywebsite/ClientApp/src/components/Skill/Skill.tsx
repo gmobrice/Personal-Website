@@ -10,13 +10,15 @@ interface ISkillProps
     years: number,
     description: string,
     rating: number,
-    outOf?: number
+    outOf?: number,
+    id: number
 }
 
 interface IRating
 {
     rating: number,
-    outOf?: number
+    outOf?: number,
+    id: number
 }
 
 export class Skill extends Component<ISkillProps> 
@@ -25,10 +27,11 @@ export class Skill extends Component<ISkillProps>
     {
         let rating: IRating = 
         {
-            rating: this.props.rating
+            rating: this.props.rating,
+            id: this.props.id
         }
 
-        if (this.props.outOf != undefined && this.props.outOf != null) rating.outOf = this.props.outOf
+        if (this.props.outOf !== undefined && this.props.outOf !== null) rating.outOf = this.props.outOf
 
         return (
         <div className="skill-card">

@@ -53,13 +53,13 @@ export class NavMenu extends Component<any, any> {
                 </NavItem>
                 
                 <NavItem>
-                  <a className="nav-link" href="https://linkedin.com/in/gmobrice" target="_blank">
+                  <a className="nav-link" href="https://linkedin.com/in/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faLinkedinIn } /> <span>linkedin.com/in/gmobrice</span>
                   </a>
                 </NavItem>
 
                 <NavItem>
-                  <a className="nav-link" href="https://github.com/gmobrice" target="_blank">
+                  <a className="nav-link" href="https://github.com/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faGithub } /> <span>github.com/gmobrice</span>
                   </a>
                 </NavItem>

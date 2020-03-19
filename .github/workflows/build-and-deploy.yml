@@ -25,5 +25,4 @@ jobs:
     - name: deploy to azure web app
       uses: azure/appservice-actions/webapp@master
       with: 
-        app-name: gmobrice
         publish-profile: ${{ secrets.azureWebAppPublishProfile }} 

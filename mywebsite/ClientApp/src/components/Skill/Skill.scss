@@ -1,0 +1,27 @@
+.skill-card
+{
+    margin: 15px 0;
+
+    .card
+    {
+        border-bottom: 2px solid #000;
+        border-radius: 0;
+        font-weight: 500;
+    }
+
+    .card-title
+    {
+        font-size: 1em;
+    }
+
+    .card-text
+    {
+        font-size: .85em;
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-family: 'Noto Sans JP' !important;
+        font-weight: 700;
+    }
+}

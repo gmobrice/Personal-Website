@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
 
 export class Home extends Component {
-    static displayName = Home.name;
+    static displayName = "Gustavo Mobrice";
 
     render() {
         return (

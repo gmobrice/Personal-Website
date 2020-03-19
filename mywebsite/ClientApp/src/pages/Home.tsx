@@ -28,11 +28,11 @@ export class Home extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
+                        <Col sm={6} md={3} xl={2}>
+                            <Skill title="C#" years={5} rating={3} id={1} description="lorem ipsum" />
                         </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
+                        <Col sm={6} md={3} xl={2}>
+                            <Skill title="Javascript" years={5} rating={3} id={2} description="lorem ipsum" />
                         </Col>
                     </Row>
                     <Row>
@@ -40,46 +40,19 @@ export class Home extends Component {
                             <h4>front-end</h4>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
+
                     <Row>
                         <Col xs={12}>
                             <h4>back-end</h4>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
+
                     <Row>
                         <Col xs={12}>
                             <h4>other</h4>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
+
                 </div>
             </div>
         );

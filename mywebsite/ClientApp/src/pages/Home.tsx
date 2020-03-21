@@ -1,86 +1,38 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown/with-html';
 import { Row, Col } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
 
-export class Home extends Component {
+interface IHomeState
+{
+    text: string
+}
+
+export class Home extends Component<{}, IHomeState> {
     static displayName = Home.name;
+
+    constructor(props: any)
+    {
+        super(props);
+        this.state = { text: "" };
+    }
+
+    async getData(name: string)
+    {
+        const response = await fetch('content?name=' + name, { method: 'POST' });
+        const data = await response.text();
+        this.setState({ text: data});
+    }
+
+    async componentWillMount()
+    {
+        await this.getData('Header');
+    }
 
     render() {
         return (
             <div>
-                <div>
-                    <Row>
-                        <Col xs={12}>
-                            <h2>Projects</h2>
-                        </Col>
-                    </Row>
-                </div>
-
-                <div>
-                    <Row>
-                        <Col xs={12}>
-                            <h2>Skills</h2>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12}>
-                            <h4>languages</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12}>
-                            <h4>front-end</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12}>
-                            <h4>back-end</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12}>
-                            <h4>other</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6} md={2}>
-                            <Skill title="C#" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                        <Col xs={6} md={2}>
-                            <Skill title="Javascript" years={ 5 } rating={ 3 } description="lorem ipsum" />
-                        </Col>
-                    </Row>
-                </div>
+                <ReactMarkdown source={ this.state.text } escapeHtml={ false } />
             </div>
         );
     }

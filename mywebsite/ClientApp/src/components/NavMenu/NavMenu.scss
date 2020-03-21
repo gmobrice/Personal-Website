@@ -1,29 +1,20 @@
-﻿@media (min-width: 768px) 
+﻿@import '../../styles/Colors.scss';
+
+@media (min-width: 768px) 
 {
   html {
     font-size: 16px;
   }
 }
 
-.navbar-brand
+.navbar
 {
-  font-family: 'Noto Sans JP';
-  font-weight: 400;
-
-  .first-name
-  {
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  .surname
-  {
-    color: rgba(0, 0, 0, 0.6);
-  }
+  padding: 20px 30px;
 }
 
 .nav-item
 {
-  font: 400 1em 'Noto Sans JP';
+  font: 400 .85em 'Noto Sans JP';
 
   .navbar-text 
   {
@@ -35,11 +26,6 @@
     }
   }
 
-  * 
-  {
-    color: black !important;
-  }
-
   &.title
   {
     font-weight: 700;
@@ -47,9 +33,18 @@
 
   a
   {
+    color: $fg-color !important;
+    padding: 10px 15px !important;
+    transition: all 0.3s ease;
+
     &:hover
     {
-      color: rgba(0, 0, 0, 0.7) !important;
+      color: $accent-color !important;
+    }
+
+    &:focus
+    {
+      color: $accent-color !important;
     }
 
     span

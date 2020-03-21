@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import '../styles/Colors.scss';
 
 body
 {
+    background: $bg-color;
     font-family: 'Noto Sans JP';
-
-    h1, h2, h3, h4, h5, h6
-    {
-        font-family: 'Noto Serif';
-    }
+    color: $fg-color !important;
 }

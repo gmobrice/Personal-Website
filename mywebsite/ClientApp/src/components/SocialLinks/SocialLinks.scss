@@ -1,0 +1,37 @@
+@import '../../styles/Colors.scss';
+
+.social
+{
+    background: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 15vh;
+    left: 30px;
+    right: auto;
+
+    >*
+    {
+        margin-bottom: 25px;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+
+    a
+    {
+        color: $fg-color;
+        transition: all 0.3s ease;
+
+        &:hover
+        {
+            color: $accent-color;
+            transform: translateY(-2px);
+        }
+    }
+}

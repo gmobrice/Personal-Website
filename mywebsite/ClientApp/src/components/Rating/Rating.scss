@@ -1,20 +1,23 @@
 .rating
 {
     background: black;
+    border: 1px solid black;
     border-radius: 100%;
     content: " ";
     float: left;
     margin-right: 2px;
-    height: 8px;
-    width: 8px;
+    height: 7px;
+    width: 7px;
 
     &.empty
     {
-        background-color: #ccc;
+        background: white;
+        border-color: #888;
     }
 
     &.filled
     {
         background-color: #666;
+        border-color: #666;
     }
 }

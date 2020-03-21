@@ -19,7 +19,7 @@ namespace mywebsite.Controllers
             try
             {
                 var file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), 
-                                            "ClientApp", "PageContent", name + ".md"));
+                                            "ClientApp", "build", "PageContent", name + ".md"));
 
                 StringBuilder content = new StringBuilder();
 

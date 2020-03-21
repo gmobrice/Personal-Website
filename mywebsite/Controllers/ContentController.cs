@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -13,14 +14,25 @@ namespace mywebsite.Controllers
     [Route("[controller]")]
     public class ContentController : ControllerBase
     {
+        private readonly IWebHostEnvironment hostingEnvironment;
+
+        public ContentController(IWebHostEnvironment hostingEnvironment)
+        {
+            this.hostingEnvironment = hostingEnvironment;
+        }
+
         [HttpPost]
         public string Post(string name)
         {
+            string[] file;
+
+            if (hostingEnvironment.EnvironmentName == "Development")
+                file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "PageContent", name + ".md"));
+            else
+                file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "build", "PageContent", name + ".md"));
+
             try
             {
-                var file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), 
-                                            "ClientApp", "build", "PageContent", name + ".md"));
-
                 StringBuilder content = new StringBuilder();
 
                 foreach (string s in file)
@@ -30,7 +42,6 @@ namespace mywebsite.Controllers
                 
                 return content.ToString();
             }
-
             catch ( Exception e )
             {
                 return e.Message;

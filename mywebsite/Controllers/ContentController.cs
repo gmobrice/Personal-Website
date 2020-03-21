@@ -16,7 +16,9 @@ namespace mywebsite.Controllers
         [HttpPost]
         public string Post(string name)
         {
-            string[] file = System.IO.File.ReadAllLines(@"PageContent/" + name + ".md");
+            var file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), 
+                            "ClientApp", "PageContent", name + ".md"));
+                            
             StringBuilder content = new StringBuilder();
 
             foreach (string s in file)

@@ -16,17 +16,26 @@ namespace mywebsite.Controllers
         [HttpPost]
         public string Post(string name)
         {
-            var file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), 
-                            "ClientApp", "PageContent", name + ".md"));
-                            
-            StringBuilder content = new StringBuilder();
-
-            foreach (string s in file)
+            try
             {
-                content.Append(s + "\n");
+                var file = System.IO.File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), 
+                                            "ClientApp", "PageContent", name + ".md"));
+
+                StringBuilder content = new StringBuilder();
+
+                foreach (string s in file)
+                {
+                    content.Append(s + "\n");
+                }
+                
+                return content.ToString();
+            }
+
+            catch ( Exception e )
+            {
+                return e.Message;
             }
             
-            return content.ToString();
         }
     }
 }

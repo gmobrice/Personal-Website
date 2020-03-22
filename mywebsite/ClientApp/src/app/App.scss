@@ -1,10 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import '../styles/fonts/Gilroy/Gilroy.css';
 @import '../styles/Colors.scss';
 
 body
 {
     background: $bg-color;
-    font-family: 'Noto Sans JP';
     color: $fg-color !important;
+    font-family: 'Gilroy';
+    font-weight: 400;
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-family: 'Gilroy';
+        font-weight: 500;
+    }
+
+    p
+    {
+        font-size: 1.125em !important;
+        letter-spacing: .05em;
+    }
+
+    .accent
+    {
+        color: $accent-color;
+    }
 }

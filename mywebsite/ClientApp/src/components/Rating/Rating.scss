@@ -1,3 +1,5 @@
+@import '../../styles/Colors.scss';
+
 .rating
 {
     background: black;
@@ -12,12 +14,12 @@
     &.empty
     {
         background: white;
-        border-color: #888;
+        border-color: white;
     }
 
     &.filled
     {
-        background-color: #666;
-        border-color: #666;
+        background-color: $accent-color;
+        border-color: $accent-color;
     }
 }

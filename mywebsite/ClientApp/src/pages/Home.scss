@@ -1,0 +1,65 @@
+@import '../styles/Colors.scss';
+@import '../styles/Mixins.scss';
+
+.intro
+{
+    @media (min-width: 768px)
+    {
+        margin-top: 40px;
+    }
+
+    .header
+    {
+        p
+        {
+            font-weight: 500;
+            margin: 8px 0;
+        }
+
+        h1
+        {
+            font-size: 3em;
+        }
+
+        h2 
+        {
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+    }
+
+    .text
+    {
+        margin-top: 20px;
+        p
+        {
+            font-weight: 400;
+        }
+
+        img
+        {
+            @media (max-width: 767px)
+            {   
+                display: none;
+            }
+
+            width: 100%;
+            margin-right: 30px;
+        }
+    }
+}
+
+.about-me
+{
+    margin-top: 40px;
+    .skills
+    {
+        >.row
+        {
+            >div
+            {
+                padding: 0 10px 20px;
+            }
+        }
+    }
+}

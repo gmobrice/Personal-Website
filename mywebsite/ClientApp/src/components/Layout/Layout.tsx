@@ -12,10 +12,10 @@ export class Layout extends Component
       <div>
         <NavMenu />
         <div>
-          <SocialLinks />
           <Container>
             {this.props.children}
           </Container>
+          <SocialLinks />
         </div>
       </div>
     );

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './NavMenu.scss';
 

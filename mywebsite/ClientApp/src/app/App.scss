@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 @import '../styles/fonts/Gilroy/Gilroy.css';
 @import '../styles/Colors.scss';
 
@@ -16,6 +14,17 @@ body
         font-weight: 500;
     }
 
+    a
+    {
+        transition: all 0.3s ease;
+        
+        &:hover
+        {
+            color: $accent-color !important;
+            text-decoration: none;
+        }
+    }
+
     p
     {
         font-size: 1.125em !important;
@@ -25,5 +34,10 @@ body
     .accent
     {
         color: $accent-color;
+    }
+
+    *:focus {
+        outline-color: $accent-color;
+        outline-width: 2px;
     }
 }

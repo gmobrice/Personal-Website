@@ -49,17 +49,26 @@
     }
 }
 
-.about-me
+.section
 {
     margin-top: 40px;
-    .skills
+
+    &.about-me
     {
-        >.row
+        .skills
         {
-            >div
+            >.row
             {
-                padding: 0 10px 20px;
+                >div
+                {
+                    padding: 0 10px 20px;
+                }
             }
         }
+    }
+
+    &.work-experience
+    {
+       
     }
 }

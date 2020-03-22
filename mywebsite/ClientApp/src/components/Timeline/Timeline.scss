@@ -1,0 +1,62 @@
+@import '../../styles/Colors.scss';
+
+.timeline
+{
+    margin-top: 40px;
+    ul
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+
+        &:before
+        {
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            margin-top: 6px;
+            background-color: $color1;
+            z-index: 0;
+        }
+
+        li
+        {
+            z-index: 1;
+
+            a
+            {
+                align-items: center;
+                color: $fg-color;
+                display: flex;
+                flex-direction: column;
+                font-weight: 500;
+                justify-content: center;
+
+                svg
+                {
+                    margin-bottom: 6px;
+                }
+
+                .year
+                {
+                    font-size: .85em;
+                    font-weight: 400;
+                }
+
+                &:hover
+                {
+                    color: $accent-color;
+
+                    svg
+                    {
+                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}

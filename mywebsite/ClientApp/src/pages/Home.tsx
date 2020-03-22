@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Row, Col, Media } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
+import { Timeline } from '../components/Timeline/Timeline';
 
 import './Home.scss';
 
@@ -69,7 +70,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                     </Row>
                 </div>
 
-                <div className="about-me">
+                <div className="about-me section">
                     <Row>
                         <Col xs={12} sm={6}>
                             <h1>about me</h1>
@@ -139,6 +140,15 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                                     </div>
                                 </Col>
                             </Row>
+                        </Col>
+                    </Row>
+                </div>
+                
+                <div className="work-experience section">
+                    <Row>
+                        <Col xs={12}>
+                            <h1>experience</h1>
+                            <Timeline />
                         </Col>
                     </Row>
                 </div>

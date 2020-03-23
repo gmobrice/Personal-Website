@@ -4,7 +4,6 @@ import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-sv
 import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 
 import './SocialLinks.scss';
-import { Button } from 'reactstrap';
 
 export class SocialLinks extends Component 
 {
@@ -12,13 +11,13 @@ export class SocialLinks extends Component
     {
         return (
             <div className="social">
-                <a href="https://github.com/gmobrice" target="_blank">
+                <a href="https://github.com/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faGithub } size="lg" />
                 </a>
-                <a href="https://linkedin.com/in/gmobrice" target="_blank">
+                <a href="https://linkedin.com/in/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faLinkedinIn } size="lg" />
                 </a>
-                <a href="https://instagram.com/gmobrice/" target="_blank">
+                <a href="https://instagram.com/gmobrice/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faInstagram } size="lg" />
                 </a>
                 <a href="mailto:gmobrice@outlook.com">

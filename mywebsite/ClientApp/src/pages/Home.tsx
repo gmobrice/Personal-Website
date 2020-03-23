@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
-import { Row, Col, Media } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
 import { Timeline } from '../components/Timeline/Timeline';
 
@@ -29,6 +29,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
     {
         super(props);
         this.state = initialHomeState;
+        this.getData = this.getData.bind(this);
     }
 
     async getData(name: string, stateProperty: keyof IHomeState)
@@ -60,7 +61,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                         <Col xs={12} className="text">
                             <Row>
                                 <Col sm={2}>
-                                    <img src={"images/gus.jpg"} className="rounded-circle" />
+                                    <img src={"images/gus.jpg"} alt="myself" className="rounded-circle" />
                                 </Col>
                                 <Col>
                                     <ReactMarkdown source={ this.state.introText } escapeHtml={ false } />

@@ -9,12 +9,7 @@ interface IRatingProps
     id: number,
 }
 
-interface IRatingState
-{
-
-}
-
-export class Rating extends Component<IRatingProps, IRatingState> 
+export class Rating extends Component<IRatingProps, {}> 
 {
     public static defaultProps: Pick<IRatingProps, "outOf"> =
     {
@@ -29,7 +24,7 @@ export class Rating extends Component<IRatingProps, IRatingState>
             render.push( <span key={this.props.id + "r" + i} className='rating filled'></span> );
 
         for (let i = 0; i < (this.props.outOf - this.props.rating); i++)
-            render.push( <span key={this.props.id + "e" + i} className='rating empty'></span> );
+            render.push( <span key={this.props.id + "e" + i} className='rating'></span> );
 
         return (
         <span>

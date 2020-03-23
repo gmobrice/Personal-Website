@@ -1,52 +1,114 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import './Timeline.scss';
 import { Row, Col } from 'reactstrap';
+import ReactMarkdown from 'react-markdown';
+import './Timeline.scss';
 
-export class Timeline extends Component
+interface ITimelineState
 {
+    selected: string,
+    details: string
+}
+
+const initialTimelineState: ITimelineState = 
+{
+    selected: "",
+    details: ""
+}
+
+
+export class Timeline extends Component<{}, ITimelineState>
+{
+    constructor(props: {})
+    {
+        super(props);
+        this.state = initialTimelineState;
+        this.getData = this.getData.bind(this);
+        this.changeExperience = this.changeExperience.bind(this);
+    }
+
+    async componentDidMount()
+    {
+        if (this.state.selected === "")
+        {
+            const selected = document.querySelectorAll("button.selected")[0].id;
+            const data = await this.getData(selected);
+            this.setState({ selected: selected, details: data });
+        }
+    }
+    
+    async changeExperience(e: React.MouseEvent<HTMLElement>)
+    {
+        e.preventDefault();
+        const selected = e.currentTarget.id;
+        const data = await this.getData(selected);
+
+        this.setState({ selected: selected, details: data });
+
+        const timelineElement = document.getElementById("timeline");
+        
+        if (timelineElement !== null)
+        {
+            let buttons = timelineElement.querySelectorAll("button");
+            buttons.forEach(node => {
+                node.classList.remove('selected');
+            });
+        }
+
+        const selectedElement = document.getElementById(this.state.selected);
+
+        if (selectedElement !== null)
+            selectedElement.classList.add('selected');
+
+    }
+
+    async getData(id: string): Promise<string>
+    {
+        const response = await fetch('content?name=' + id, { method: 'POST' });
+        const data = await response.text();
+
+        return data;
+    }
+
     render()
     {
         return (
-        <div className="timeline">
+        <div id="timeline">
             <ul>
                 <li>
-                    <a href="javascript:;">
+                    <button id="Microsoft2015" onClick={this.changeExperience}>
                         <FontAwesomeIcon icon={ faCircle } size="xs" />
                         <span>Microsoft</span>
                         <span className="year">2015</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <button id="Microsoft2017" onClick={this.changeExperience}>
                         <FontAwesomeIcon icon={ faCircle } size="xs" />
                         <span>Microsoft</span>
                         <span className="year">2017</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <button id="Brasoftware2019" onClick={this.changeExperience}>
                         <FontAwesomeIcon icon={ faCircle } size="xs" />
                         <span>Brasoftware</span>
                         <span className="year">2019</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <button id="Microsoft2019" className="selected" onClick={this.changeExperience}>
                         <FontAwesomeIcon icon={ faCircle } size="xs" />
                         <span>Microsoft</span>
                         <span className="year">2019</span>
-                    </a>
+                    </button>
                 </li>
             </ul>
+            
             <Row>
-                <Col xs={12}>
-                    <h4>Title</h4>
-                    <h6>Subtitle</h6>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et nulla nec velit vehicula commodo. Fusce pellentesque arcu vel dictum fringilla. Suspendisse at lobortis neque. Vivamus dictum erat et mi bibendum venenatis. Quisque id lacus sapien. Etiam tempor tortor elit, at ornare erat fermentum tristique. Vestibulum rhoncus risus sed odio gravida, eu auctor justo bibendum. Nunc rhoncus ex lorem, nec suscipit quam ullamcorper nec. Pellentesque eu porta purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent ac nulla at risus hendrerit pretium sed vel risus. Nunc eget sollicitudin dui, ac semper risus. Sed euismod congue tellus vel rutrum. Nulla eget urna augue. Vestibulum vitae luctus odio, vitae consequat eros. Aliquam volutpat ligula a tincidunt varius.
-                    </p>
+                <Col xs={12} className="experience-details">
+                    <ReactMarkdown source={this.state.details} escapeHtml={ false } />
                 </Col>
             </Row>
         </div>

@@ -5,7 +5,7 @@
 {
     @media (min-width: 768px)
     {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .header
@@ -51,12 +51,17 @@
 
 .section
 {
-    margin-top: 40px;
+    margin-top: 60px;
 
     &.about-me
     {
         .skills
         {
+            @media (max-width: 767px)
+            {   
+                margin-top: 40px;
+            }
+
             >.row
             {
                 >div

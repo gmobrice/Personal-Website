@@ -1,7 +1,7 @@
 @import '../styles/Colors.scss';
 @import '../styles/Mixins.scss';
 
-.intro
+#intro
 {
     @media (min-width: 768px)
     {
@@ -53,27 +53,14 @@
 {
     margin-top: 60px;
 
-    &.about-me
+    &#skills
     {
-        .skills
+        >.row
         {
-            @media (max-width: 767px)
-            {   
-                margin-top: 40px;
-            }
-
-            >.row
+            >div
             {
-                >div
-                {
-                    padding: 0 10px 20px;
-                }
+                padding: 0 10px 20px;
             }
         }
-    }
-
-    &.work-experience
-    {
-       
     }
 }

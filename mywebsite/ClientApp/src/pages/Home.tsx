@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown/with-html';
 import { Row, Col } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
 import { Timeline } from '../components/Timeline/Timeline';
-
+import { Project } from '../components/Project/Project';
 import './Home.scss';
 
 interface IHomeState
@@ -51,7 +51,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
     render() {
         return (
             <div>
-                <div className="intro">
+                <div id="intro">
                     <Row>
                         <Col xs={12} className="header">
                             <ReactMarkdown source={ this.state.introHeader } escapeHtml={ false } />
@@ -71,13 +71,13 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                     </Row>
                 </div>
 
-                <div className="about-me section">
+                <div>
                     <Row>
-                        <Col xs={12} sm={6}>
+                        <Col id="about-me" className="section" xs={12} sm={6}>
                             <h1>about me</h1>
                             <ReactMarkdown source={ this.state.aboutMeText } escapeHtml={ false } />
                         </Col>
-                        <Col xs={12} sm={6} className="skills">
+                        <Col id="skills" className="section" xs={12} sm={6} >
                             <h1>skills</h1>
                             <Row>
                                 <Col xs={4} sm={3}>
@@ -145,7 +145,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                     </Row>
                 </div>
                 
-                <div className="work-experience section">
+                <div id="experience" className="section">
                     <Row>
                         <Col xs={12}>
                             <h1>experience</h1>
@@ -154,6 +154,36 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                     </Row>
                 </div>
 
+                <div id="projects" className="section">
+                    <Row>
+                        <Col xs={12}>
+                            <h1>projects</h1>
+                            <Row>
+                                <Col md={6}>
+                                    <Project />
+                                </Col>
+                                <Col md={6}>
+                                    <Project />
+                                </Col>
+                                <Col md={6}>
+                                    <Project />
+                                </Col>
+                                <Col md={6}>
+                                    <Project />
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </div>
+
+                <div id="contact" className="section">
+                    <Row>
+                        <Col xs={12}>
+                            <h1>contact</h1>
+                            <p>lorem ipsum</p>
+                        </Col>
+                    </Row>
+                </div>
             </div>
         );
     }

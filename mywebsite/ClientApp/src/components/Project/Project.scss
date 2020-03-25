@@ -1,0 +1,23 @@
+@import '../../styles/Mixins.scss';
+
+.project-card
+{
+    @include black-card;
+    margin: 0 0 30px;
+
+    .carousel
+    {
+        margin-bottom: 30px;
+    }
+
+    >div
+    {
+        padding: 30px;
+    }
+
+    h6
+    {
+        font-size: 1em;
+        font-weight: 400;
+    }
+}

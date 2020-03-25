@@ -34,7 +34,7 @@ export class Skill extends Component<ISkillProps>
         if (this.props.outOf !== undefined && this.props.outOf !== null) rating.outOf = this.props.outOf
 
         return (
-        <Row className="skill-card" >
+        <Row className="skill-card">
             <Col>
                 <h6>{ this.props.title }</h6>
                 <p>

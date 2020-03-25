@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Collapse, Container, Navbar, NavbarToggler, NavItem } from 'reactstrap';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './NavMenu.scss';
 
 export class NavMenu extends Component<any, any> {
@@ -26,30 +26,30 @@ export class NavMenu extends Component<any, any> {
       <header>
         <Navbar dark expand="md" className="navbar-toggleable-md"> 
           <Container fluid>
-            <NavbarBrand tag={Link} to="/">
-            </NavbarBrand>
+            {/* <NavbarBrand to="/">
+            </NavbarBrand> */}
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-md-inline-flex flex-md-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
 
                 <NavItem className="about">
-                  <NavLink tag={Link} className="text-dark" to="/">About me</NavLink>
+                  <NavLink smooth to="/#about-me">About me</NavLink>
                 </NavItem>
 
                 <NavItem className="about">
-                  <NavLink tag={Link} className="text-dark" to="/">Experience</NavLink>
+                  <NavLink smooth to="/#experience">Experience</NavLink>
                 </NavItem>
 
                 <NavItem className="about">
-                  <NavLink tag={Link} className="text-dark" to="/">Projects</NavLink>
+                  <NavLink smooth to="/#projects">Projects</NavLink>
                 </NavItem>
 
                 <NavItem className="about">
-                  <NavLink tag={Link} className="text-dark" to="/">Contact</NavLink>
+                  <NavLink smooth to="/#contact">Contact</NavLink>
                 </NavItem>
 
                 <NavItem className="about">
-                  <NavLink tag={Link} className="text-dark" to="/">Resume</NavLink>
+                  <NavLink to="/">Resume</NavLink>
                 </NavItem>
                 
               </ul>

@@ -1,4 +1,5 @@
 @import '../../styles/Mixins.scss';
+@import '../../styles/Colors.scss';
 
 .skill-card
 {
@@ -10,9 +11,13 @@
         padding: 15px 10px;
     }
 
-    h6
+    p
     {
+        &:first-child
+        {
+            margin-bottom: 8px;
+        }
+        color: $fg-color;
         font-size: 1em;
-        font-weight: 400;
     }
 }

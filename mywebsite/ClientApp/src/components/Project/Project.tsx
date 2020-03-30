@@ -37,7 +37,7 @@ export class Project extends Component
                 <Row className="project-card">
                     <Col>
                         <UncontrolledCarousel items={items} indicators={false} interval={false} />
-                        <h5>Project name</h5>
+                        <h5 className="headline-4">Project name</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod congue massa. Nulla non ipsum euismod enim imperdiet commodo. Integer et augue ullamcorper, efficitur est eget, congue sapien. Curabitur ullamcorper leo vitae neque sodales dictum ut sed metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum non nisl a ligula pellentesque suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <a href="/"><FontAwesomeIcon icon={ faGithub } /></a>
                     </Col>

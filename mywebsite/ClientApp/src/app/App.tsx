@@ -6,7 +6,7 @@ import { Home } from '../pages/Home';
 import './App.scss';
 
 export default class App extends Component {
-  static displayName = App.name;
+  static displayName = "Gustavo Mobrice";
 
   render () {
     return (

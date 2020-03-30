@@ -13,20 +13,48 @@
   {
     @media (min-width: 768px)
     {
-      @include black-card;
       padding: 15px 0;
     }
 
     .nav-item
     {
-      font: 400 1em 'Gilroy';
-      text-transform: lowercase;
       margin-bottom: 10px;
+      transition: all 0.3s ease;
+
+      &:hover
+      {
+        transform: translateY(-2px);
+      }
 
       @media (min-width: 768px)
       {
         margin: 0 20px;
       }
+
+      &.resume
+      {
+
+        &:hover
+        {
+          transform: none;
+        }
+
+        a
+        {
+          background: rgba(60, 165, 251, .12);
+          border: 1px solid $accent-color;
+          border-radius: 4px;
+          color: $accent-color !important;
+          padding: 8px 16px;
+
+          &:hover
+          {
+          background: rgba(60, 165, 251, .24);
+
+          }
+        }
+      }
+
 
       .navbar-text 
       {
@@ -38,41 +66,15 @@
         }
       }
 
-      &.title
-      {
-        font-weight: 700;
-      }
-
       a
       {
-        border-bottom: 1px solid $color1;
         color: $fg-color !important;
         transition: all 0.3s ease;
 
-        &:hover, &.selected
-        {
-          color: $accent-color !important;
-          border-bottom: 1px solid $accent-color;
-        }
-
-        &:focus
+        &:hover, &.selected, &:focus
         {
           color: $accent-color !important;
         }
-
-        span
-        {
-          display: none;
-          font-size: .75em;
-          margin-left: 10px;
-
-          @media (max-width: 767px)
-          {
-            display: inline;
-          }
-
-        }
-
       }
     }
   }

@@ -2,8 +2,8 @@
 
 #timeline
 {
-    margin-top: 40px;
-    ul
+    
+    .timeline
     {
         display: flex;
         flex-direction: row;
@@ -52,6 +52,7 @@
                 &:hover, &:focus, &.selected
                 {
                     color: $accent-color;
+                    transform: translateY(-2px);
 
                     svg
                     {
@@ -61,9 +62,16 @@
             }
         }
     }
-}
 
-.experience-details
-{
-    margin-top: 20px;
+    .details 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        > div
+        {
+            width: 50%;
+        }
+    }
 }

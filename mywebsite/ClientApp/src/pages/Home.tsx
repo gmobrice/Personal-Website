@@ -60,10 +60,8 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                     <Row>
                         <Col xs={12} className="text">
                             <Row>
-                                <Col sm={2}>
+                                <Col xs={12} className="inner">
                                     <img src={"images/gus.jpg"} alt="myself" className="rounded-circle" />
-                                </Col>
-                                <Col>
                                     <ReactMarkdown source={ this.state.introText } escapeHtml={ false } />
                                 </Col>
                             </Row>
@@ -74,70 +72,70 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                 <div>
                     <Row>
                         <Col id="about-me" className="section" xs={12} sm={6}>
-                            <h1>about me</h1>
+                            <h2 className="section-header">about me</h2>
                             <ReactMarkdown source={ this.state.aboutMeText } escapeHtml={ false } />
                         </Col>
                         <Col id="skills" className="section" xs={12} sm={6} >
-                            <h1>skills</h1>
+                            <h2 className="section-header">skills</h2>
                             <Row>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="C#" description="" years={5} rating={4} />
+                                        <Skill id={1} title="HTML" description="" rating={5} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="TypeScript" description="" years={5} rating={4} />
+                                        <Skill id={1} title="CSS / SCSS" description="" rating={5} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="React" description="" years={5} rating={4} />
+                                        <Skill id={1} title="JavaScript" description="" rating={4} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="Azure" description="" years={5} rating={4} />
+                                        <Skill id={1} title="React" description="" rating={4} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="HTML" description="" years={5} rating={4} />
+                                        <Skill id={1} title="C#" description="" rating={4} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="CSS / SCSS" description="" years={5} rating={4} />
+                                        <Skill id={1} title="ASP.NET" description="" rating={4} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="Git" description="" years={5} rating={4} />
+                                        <Skill id={1} title="Azure" description="" rating={4} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="HTML" description="" years={5} rating={4} />
+                                        <Skill id={1} title="TypeScript" description="" rating={3} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="CSS / SCSS" description="" years={5} rating={4} />
+                                        <Skill id={1} title="Git" description="" rating={3} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="Git" description="" years={5} rating={4} />
+                                        <Skill id={1} title="SQL" description="" rating={3} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="HTML" description="" years={5} rating={4} />
+                                        <Skill id={1} title="PHP" description="" rating={3} />
                                     </div>
                                 </Col>
                                 <Col xs={4} sm={3}>
                                     <div>
-                                        <Skill id={1} title="CSS / SCSS" description="" years={5} rating={4} />
+                                        <Skill id={1} title="Node.js" description="" rating={3} />
                                     </div>
                                 </Col>
                             </Row>
@@ -148,7 +146,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                 <div id="experience" className="section">
                     <Row>
                         <Col xs={12}>
-                            <h1>experience</h1>
+                            <h2 className="section-header">experience</h2>
                             <Timeline />
                         </Col>
                     </Row>
@@ -157,7 +155,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                 <div id="projects" className="section">
                     <Row>
                         <Col xs={12}>
-                            <h1>projects</h1>
+                            <h2 className="section-header">projects</h2>
                             <Row>
                                 <Col md={6}>
                                     <Project />
@@ -178,9 +176,17 @@ export class Home extends Component<{}, Partial<IHomeState>> {
 
                 <div id="contact" className="section">
                     <Row>
-                        <Col xs={12}>
-                            <h1>contact</h1>
-                            <p>lorem ipsum</p>
+                        <Col className="contact-info">
+                            <div>
+                                <h2>Fancy a chat?</h2>
+                                <p>lorem ipsum</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    Follow me for more thoughts and regular updates on <a href="">GitHub</a>, <a href="">LinkedIn</a> and <a href="">Instagram</a>.
+                                </p>
+                            </div>
                         </Col>
                     </Row>
                 </div>

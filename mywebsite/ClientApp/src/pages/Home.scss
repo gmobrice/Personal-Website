@@ -31,21 +31,32 @@
     .text
     {
         margin-top: 20px;
-        p
-        {
-            font-weight: 400;
-        }
 
-        img
+        .inner
         {
-            @media (max-width: 767px)
-            {   
-                display: none;
+            display: flex;
+            align-items: center;
+
+            p
+            {
+                margin: 0;
+                width: 592px;
             }
 
-            width: 100%;
-            margin-right: 30px;
+            img
+            {
+                @media (max-width: 767px)
+                {   
+                    display: none;
+                }
+
+                width: 96px;
+                height: 96px;
+                margin-right: 32px;
+            }
         }
+
+        
     }
 }
 
@@ -61,6 +72,17 @@
             {
                 padding: 0 10px 20px;
             }
+        }
+    }
+
+    &#contact
+    {
+        .contact-info
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
         }
     }
 }

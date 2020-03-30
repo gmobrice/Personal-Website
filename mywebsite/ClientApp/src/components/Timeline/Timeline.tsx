@@ -8,13 +8,15 @@ import './Timeline.scss';
 interface ITimelineState
 {
     selected: string,
-    details: string
+    roleDetails: string,
+    companyDetails: string
 }
 
 const initialTimelineState: ITimelineState = 
 {
     selected: "",
-    details: ""
+    roleDetails: "",
+    companyDetails : ""
 }
 
 
@@ -33,8 +35,9 @@ export class Timeline extends Component<{}, ITimelineState>
         if (this.state.selected === "")
         {
             const selected = document.querySelectorAll("button.selected")[0].id;
-            const data = await this.getData(selected);
-            this.setState({ selected: selected, details: data });
+            const roleData = await this.getData(selected + "Role");
+            const companyData = await this.getData(selected + "Company");
+            this.setState({ selected: selected, roleDetails: roleData, companyDetails: companyData });
         }
     }
     
@@ -42,9 +45,10 @@ export class Timeline extends Component<{}, ITimelineState>
     {
         e.preventDefault();
         const selected = e.currentTarget.id;
-        const data = await this.getData(selected);
+        const roleData = await this.getData(selected + "Role");
+        const companyData = await this.getData(selected + "Company");
 
-        this.setState({ selected: selected, details: data });
+        this.setState({ selected: selected, roleDetails: roleData, companyDetails: companyData });
 
         const timelineElement = document.getElementById("timeline");
         
@@ -74,8 +78,8 @@ export class Timeline extends Component<{}, ITimelineState>
     render()
     {
         return (
-        <div id="timeline">
-            <ul>
+        <div id="timeline" className="mt-5">
+            <ul className="timeline">
                 <li>
                     <button id="Microsoft2015" onClick={this.changeExperience}>
                         <FontAwesomeIcon icon={ faCircle } size="xs" />
@@ -107,8 +111,13 @@ export class Timeline extends Component<{}, ITimelineState>
             </ul>
             
             <Row>
-                <Col xs={12} className="experience-details">
-                    <ReactMarkdown source={this.state.details} escapeHtml={ false } />
+                <Col xs={12} className="details mt-5">
+                    <div>
+                        <ReactMarkdown source={this.state.companyDetails} escapeHtml={ false } />
+                    </div>
+                    <div className="ml-3">
+                        <ReactMarkdown source={this.state.roleDetails} escapeHtml={ false } />
+                    </div>
                 </Col>
             </Row>
         </div>

@@ -7,7 +7,6 @@ import './Skill.scss';
 interface ISkillProps
 {
     title: string,
-    years: number,
     description: string,
     rating: number,
     outOf?: number,
@@ -36,7 +35,7 @@ export class Skill extends Component<ISkillProps>
         return (
         <Row className="skill-card">
             <Col>
-                <h6>{ this.props.title }</h6>
+                <p>{ this.props.title }</p>
                 <p>
                     <Rating {...rating} />
                 </p>

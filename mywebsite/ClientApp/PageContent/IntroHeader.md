@@ -1,5 +1,5 @@
-Hi there! My name is 
+<span class="subhead">Hi there! My name is</span>
 
 # Gustavo Mobrice
 
-## and I want to <span class="accent">transform people's lives through technology</span>.
+#### and I want to transform people's lives through technology.

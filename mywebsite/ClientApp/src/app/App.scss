@@ -1,17 +1,50 @@
 @import '../styles/fonts/Gilroy/Gilroy.css';
 @import '../styles/Colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 body
 {
     background: $bg-color;
     color: $fg-color !important;
-    font-family: 'Gilroy';
+    font-family: 'Source Sans Pro';
     font-weight: 400;
 
     h1, h2, h3, h4, h5, h6
     {
+        display: flex;
+        flex-direction: column;
         font-family: 'Gilroy';
-        font-weight: 500;
+        font-weight: 700;
+
+        &.section-header
+        {
+            margin-bottom: 24px;
+
+            &:after
+            {
+                background: $accent-color;
+                content: ' ';
+                margin-top: 8px;
+                width: 16px;
+                height: 2px;
+            }
+        }
+    }
+
+    h1
+    {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    h2
+    {
+        font-size: 36px;
+    }
+
+    h4
+    {
+        font-size: 24px;
     }
 
     a, button
@@ -27,12 +60,24 @@ body
 
     p
     {
-        font-size: 1.125em !important;
-        letter-spacing: .05em;
+        color: $text-color;
     }
 
-    .accent
+    .subhead
     {
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+
+        &:before
+        {
+            background: $accent-color;
+            content: ' ';
+            height: 2px;
+            width: 16px;
+            margin-right: 16px;
+        }
+
         color: $accent-color;
     }
 

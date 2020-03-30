@@ -1,1 +1,8 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa augue, mattis eu diam non, rhoncus sollicitudin odio. Ut malesuada feugiat nisl id luctus. Duis ut viverra quam. Nam condimentum posuere felis, id pellentesque urna hendrerit et. Integer efficitur fermentum tincidunt. Phasellus vitae mi odio. Cras eu tempus quam. Aliquam mattis, dui at venenatis vulputate, neque lacus bibendum dui, ullamcorper elementum est enim in leo. In sed porta libero, at placerat sapien. Integer dui nisi, scelerisque ac lorem et, suscipit porta lacus. Vivamus sem mi, condimentum non felis eu, finibus varius tellus. Morbi vel hendrerit augue.
+I have been a technology geek since my childhood, always following the trends and trying to learn stuff on my own. Probably my first contact with programming was when I was 12 years old and was trying to learn how to write any piece of code with VB.NET and Visual Studio 2005.
+
+Since then I studied and worked with a lot of programming languages like C, C#, Java, JavaScript, PHP and Python, in different types of projects such as web applications, Internet of Things and Windows apps during my college years and in some work experiences.
+
+Apart from my geek side, I am an easy-going and communicative person who gets along with everybody, and is always open to receiving feedback and listening to other people.
+
+Music also plays a huge part in my life, whether listening to a good prog rock tune or playing it on one of my guitars, it always makes me feel good and inspired for what is next in my life.
+ 

@@ -10,8 +10,11 @@ export class Footer extends Component
         return (
             <footer>
                 <Container>
-                    <div className="d-flex justify-content-center">
-                        Lorem ipsum dolor sit amet
+                    <div className="d-flex">
+                        <p>
+                            Check it out the <a href="https://github.com/gmobrice/my-website" target="_blank" rel="noopener noreferrer">GitHub repo</a> of this website! <br />
+                            Design by my good friend <a href="https://michelkoga.com/" target="_blank" rel="noopener noreferrer">Michel Koga</a> <small>go check his work!</small> 
+                        </p>
                     </div>
                 </Container>
             </footer>

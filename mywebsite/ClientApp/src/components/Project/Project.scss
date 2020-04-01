@@ -16,14 +16,14 @@
         padding: 30px;
     }
 
-    h6
+    .links 
     {
-        font-size: 1em;
-        font-weight: 400;
+        display: flex;
+        
+        > *
+        {
+            margin-right: 12px;
+        }
     }
-    
-    p
-    {
-        color: $text-color;
-    }
+
 }

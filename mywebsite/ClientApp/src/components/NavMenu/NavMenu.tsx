@@ -26,12 +26,9 @@ export class NavMenu extends Component<any, any> {
       <header>
         <Navbar dark expand="md" className="navbar-toggleable-md"> 
           <Container fluid>
-            {/* <NavbarBrand to="/">
-            </NavbarBrand> */}
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-md-inline-flex flex-md-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
-
                 <NavItem>
                   <NavLink smooth to="/#about-me">About me</NavLink>
                 </NavItem>
@@ -49,9 +46,8 @@ export class NavMenu extends Component<any, any> {
                 </NavItem>
 
                 <NavItem className="resume">
-                  <NavLink to="/">Resume</NavLink>
+                  <a href="Resume.pdf" target="_blank">Resume</a>
                 </NavItem>
-                
               </ul>
             </Collapse>
           </Container>

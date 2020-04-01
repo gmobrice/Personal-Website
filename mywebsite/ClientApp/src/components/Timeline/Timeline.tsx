@@ -78,7 +78,7 @@ export class Timeline extends Component<{}, ITimelineState>
     render()
     {
         return (
-        <div id="timeline" className="mt-5">
+        <div id="timeline">
             <ul className="timeline">
                 <li>
                     <button id="Microsoft2015" onClick={this.changeExperience}>
@@ -111,11 +111,11 @@ export class Timeline extends Component<{}, ITimelineState>
             </ul>
             
             <Row>
-                <Col xs={12} className="details mt-5">
+                <Col xs={12} className="details">
                     <div>
                         <ReactMarkdown source={this.state.companyDetails} escapeHtml={ false } />
                     </div>
-                    <div className="ml-3">
+                    <div>
                         <ReactMarkdown source={this.state.roleDetails} escapeHtml={ false } />
                     </div>
                 </Col>

@@ -3,6 +3,13 @@
 @font-face {
 font-family: 'Gilroy';
 font-style: normal;
+font-weight: 800;
+src: local('Gilroy-Bold'), url('Gilroy-Heavy.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Gilroy';
+font-style: normal;
 font-weight: 700;
 src: local('Gilroy-Bold'), url('Gilroy-Bold.woff') format('woff');
 }

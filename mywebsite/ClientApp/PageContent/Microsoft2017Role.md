@@ -1,4 +1,8 @@
-#### Microsoft
-##### from July 2017 - March 2019
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at neque tristique nisi ultrices commodo et a metus. Ut id finibus tortor. Nam ornare sagittis turpis, condimentum convallis diam porttitor et. Nunc sit amet sagittis mauris, at sodales sapien. Nulla rhoncus turpis eget blandit volutpat. Pellentesque id molestie sapien. Donec eget facilisis nibh. Duis ac tempor nulla, nec aliquet sem. Praesent fringilla molestie enim. Morbi feugiat nec risus eu commodo. Curabitur vel eros et lectus laoreet eleifend eu euismod mi. Proin tempus tempor tellus. Sed consequat ut odio eget interdum.
+###### Role
+* Write modern and performant code for diverse array of projects
+with a significant number of teams.
+* Work with a variety of different languages and frameworks such as
+C#, ASP.NET Core, JavaScript/TypeScript, React, HTML, CSS and
+Microsoft Azure cloud services.
+* Communicate and collaborate with designers, developers,
+managers and stakeholders on a daily basis.

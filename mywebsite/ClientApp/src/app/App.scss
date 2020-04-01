@@ -47,15 +47,19 @@ body
         font-size: 24px;
     }
 
+    a
+    {
+        color: $fg-color;
+
+        &:hover
+        {
+            color: $accent-color;
+        }
+    }
+
     a, button
     {
         transition: all 0.3s ease;
-        
-        &:hover
-        {
-            color: $accent-color !important;
-            text-decoration: none;
-        }
     }
 
     p

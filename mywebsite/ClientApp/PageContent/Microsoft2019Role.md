@@ -1,4 +1,5 @@
-#### Microsoft
-##### from October 2019 - Current position
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at neque tristique nisi ultrices commodo et a metus. Ut id finibus tortor. Nam ornare sagittis turpis, condimentum convallis diam porttitor et. Nunc sit amet sagittis mauris, at sodales sapien. Nulla rhoncus turpis eget blandit volutpat. Pellentesque id molestie sapien. Donec eget facilisis nibh. Duis ac tempor nulla, nec aliquet sem. Praesent fringilla molestie enim. Morbi feugiat nec risus eu commodo. Curabitur vel eros et lectus laoreet eleifend eu euismod mi. Proin tempus tempor tellus. Sed consequat ut odio eget interdum.
+###### Role
+* Responsible for what topics and how Microsoft talks to more than
+1.9M developers in Brazil.
+* Coverage of technical events.
+* Create technical content to engage the developer audience.

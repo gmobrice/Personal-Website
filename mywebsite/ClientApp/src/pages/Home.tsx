@@ -354,7 +354,7 @@ export class Home extends Component<{}, Partial<IHomeState>> {
 
                             <div>
                                 <p>
-                                    Follow me for more thoughts and regular updates on <a href="https://github.com/gmobrice" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://linkedin.com/in/gmobrice" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://instagram.com/gmobrice/" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                                    Follow me for more thoughts and regular updates on <a href="https://github.com/gmobrice" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://medium.com/@gmobrice" target="_blank" rel="noopener noreferrer">Medium</a>, <a href="https://linkedin.com/in/gmobrice" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://instagram.com/gmobrice/" target="_blank" rel="noopener noreferrer">Instagram</a>.
                                 </p>
                             </div>
                         </Col>

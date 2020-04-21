@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faGithub, faInstagram, faMediumM } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 
 import './SocialLinks.scss';
@@ -13,6 +13,9 @@ export class SocialLinks extends Component
             <div className="social">
                 <a href="https://github.com/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faGithub } size="lg" />
+                </a>
+                <a href="https://medium.com/@gmobrice" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={ faMediumM } size="lg" />
                 </a>
                 <a href="https://linkedin.com/in/gmobrice" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={ faLinkedinIn } size="lg" />

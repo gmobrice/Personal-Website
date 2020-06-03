@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, UncontrolledCarousel } from 'reactstrap';
+import { UncontrolledCarousel } from 'reactstrap';
 import ReactMarkdown from 'react-markdown/with-html';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IProjectProps } from '../Interfaces/Interfaces';

@@ -4,20 +4,22 @@
 .project-card
 {
     @include black-card;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
     margin: 0 0 30px;
+    min-height: 730px;
+    padding: 30px;
 
     .carousel
     {
         margin-bottom: 30px;
     }
 
-    >div
-    {
-        padding: 30px;
-    }
-
     .links 
     {
+        justify-self: flex-end;
+        align-items: flex-end;
         display: flex;
         
         > *
@@ -25,5 +27,12 @@
             margin-right: 12px;
         }
     }
+}
 
+.article
+{
+    .project-card
+    {
+        min-height: 300px;
+    }
 }

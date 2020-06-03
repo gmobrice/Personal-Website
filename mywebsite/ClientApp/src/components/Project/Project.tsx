@@ -10,6 +10,8 @@ export class Project extends Component<IProjectProps, {}>
     render ()
     {
         let links: JSX.Element[] = [];
+        let carousel: JSX.Element = <></>;
+
         if (this.props.links !== undefined)
         {
             for (let i = 0; i < this.props.links.length; i++)
@@ -24,16 +26,19 @@ export class Project extends Component<IProjectProps, {}>
             }
         }
 
+        if (this.props.carouselItems.length > 0)
+        {
+            carousel = <UncontrolledCarousel items={ this.props.carouselItems } indicators={false} interval={false} />
+        }
+
         return (
             <div>
-                <Row className="project-card">
-                    <Col>
-                        <UncontrolledCarousel items={ this.props.carouselItems } indicators={false} interval={false} />
-                        <h5>{ this.props.name }</h5>
-                        <div><ReactMarkdown source={ this.props.description } escapeHtml={ false } /></div>
-                        <div className="links">{ links }</div>
-                    </Col>
-                </Row>
+                <div className="project-card">
+                    { carousel }
+                    <h5>{ this.props.name }</h5>
+                    <div><ReactMarkdown source={ this.props.description } escapeHtml={ false } /></div>
+                    <div className="links">{ links }</div>
+                </div>
             </div>
         );
     }

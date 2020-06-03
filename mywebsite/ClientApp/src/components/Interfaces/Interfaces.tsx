@@ -22,3 +22,13 @@ export interface IProjectProps
     description: string,
     links: IProjectLink[]
 }
+
+export interface IHomeState
+{
+    introHeader: string,
+    introText: string,
+    aboutMeText: string,
+    skillsText: string,
+    projects: IProjectProps[],
+    articles: IProjectProps[]
+}

@@ -4,19 +4,10 @@ import { Row, Col } from 'reactstrap';
 import { Skill } from '../components/Skill/Skill';
 import { Timeline } from '../components/Timeline/Timeline';
 import { Project } from '../components/Project/Project';
-import { IProjectProps } from '../components/Interfaces/Interfaces';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { IProjectProps, IHomeState } from '../components/Interfaces/Interfaces';
+import { faYoutube, faMediumM, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faNewspaper, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import './Home.scss';
-
-interface IHomeState
-{
-    introHeader: string,
-    introText: string,
-    aboutMeText: string,
-    skillsText: string,
-    projects: IProjectProps[]
-}
 
 const initialHomeState: IHomeState = 
 {
@@ -24,7 +15,8 @@ const initialHomeState: IHomeState =
     introText: "",
     aboutMeText: "",
     skillsText: "",
-    projects: []
+    projects: [],
+    articles: []
 }
 
 export class Home extends Component<{}, Partial<IHomeState>> {
@@ -211,12 +203,45 @@ export class Home extends Component<{}, Partial<IHomeState>> {
             ]
         };
 
-        this.setState({ projects: [proj01, proj02, proj03, proj04, proj05] })
+        const art01: IProjectProps = 
+        {
+            carouselItems: [],
+            name: "Talk - Starting with Microsoft Bot Framework and Azure",
+            description: "I was invited by a former teacher to give a talk about C# and Azure in their local developers meetup. Spent the time talking about how transform a website into a chatbot using Microsoft Bot Framework and Azure Cognitive Services, such as LUIS.",
+            links: 
+            [
+                {
+                    icon: faYoutube,
+                    link: "https://youtu.be/ca4QgzUIxgY?t=3698"
+                },
+                {
+                    icon: faGithub,
+                    link: "https://github.com/gmobrice/meetup-itudevelopers-chatbots"
+                }
+            ]
+        };
+
+        const art02: IProjectProps = 
+        {
+            carouselItems: [],
+            name: "Article - Triggering Azure Logic Apps with HTTP Requests",
+            description: "This is my debut article on Medium. In this article I go over the topic of Azure Logic Apps and how to trigger them using C# and HTTP Requests.",
+            links: 
+            [
+                {
+                    icon: faMediumM,
+                    link: "https://medium.com/@gmobrice/triggering-azure-logic-apps-with-http-requests-468c75a4d5f6"
+                }
+            ]
+        };
+
+        this.setState({ projects: [proj01, proj02, proj03, proj04, proj05], articles: [art01, art02] });
     }
 
     render() {
 
         let projects: JSX.Element[] = [];
+        let articles: JSX.Element[] = [];
 
         if (this.state.projects !== undefined)
         {
@@ -225,6 +250,18 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                 projects.push (
                     <Col md={6} key={ "p" + i } >
                         <Project {...this.state.projects[i]} />
+                    </Col>
+                );
+            }
+        }
+
+        if (this.state.articles !== undefined)
+        {
+            for (let i = 0; i < this.state.articles.length; i++)
+            {
+                articles.push (
+                    <Col className="article" md={4} sm={6} xs={12} key={ "a" + i } >
+                        <Project {...this.state.articles[i]} />
                     </Col>
                 );
             }
@@ -339,6 +376,17 @@ export class Home extends Component<{}, Partial<IHomeState>> {
                             <h2 className="section-header">projects</h2>
                             <Row>
                                 { projects }
+                            </Row>
+                        </Col>
+                    </Row>
+                </div>
+
+                <div id="articles" className="section">
+                    <Row>
+                        <Col xs={12}>
+                            <h2 className="section-header">articles and talks</h2>
+                            <Row>
+                                { articles }
                             </Row>
                         </Col>
                     </Row>
